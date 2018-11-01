@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Animation and Transitional</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .containerbase{
+
+            /* Calculate the width */
+            width: calc(100% - 40px);
+
+            background-color:#CDEBC4;
+            color:#6D8B64;
+            text-align:center;
+            padding:25px 0;
+            margin: 0 auto;
+        }
+        .container{
+            width: 300px;
+            height:300px;
+            margin: 0 auto;
+            position: relative;
+            overflow:hidden;
+            border: 1px solid black;
+        }
+
+        .planet{
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background:url(https://demo.tutorialzine.com/2013/10/css3-features-you-can-finally-use/assets/img/planet.png) no-repeat center center;
+        }
+
+        .rocket{
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background:url(https://demo.tutorialzine.com/2013/10/css3-features-you-can-finally-use/assets/img/rocket.png) no-repeat 50px center;
+
+            /* Chrome still requires the -webkit- prefix */
+            -webkit-animation:orbit 2s linear infinite;
+            animation:orbit 2s linear infinite;
+
+            transition:background-position 0.8s;
+        }
+
+        .container:hover .rocket{
+            background-position:80px center;
+        }
+
+        /* Define the keyframes of the animation */
+
+        @-webkit-keyframes orbit {
+            from {
+                -webkit-transform:rotate(0deg);} /*rotates an element around*/
+            to {
+                -webkit-transform:rotate(360deg);
+            }
+        }
+
+        @keyframes orbit {
+            from {
+                transform:rotate(0deg);
+
+                /* I am including the -webkit-transform properties, because
+                Chrome might start supporting keyframe without prefix in the future,
+                but we can't be certain whether it will support prefix-free transform
+                at the same time */
+
+                -webkit-transform:rotate(0deg);}
+            to {
+                transform:rotate(360deg);
+                -webkit-transform:rotate(360deg);
+            }
+        }
+
+        /*-------------------------------------------------------*/
+        .container1{
+            width: 300px;
+            height:300px;
+            margin: 0 auto;
+            position: relative;
+            overflow:hidden;
+            border: 1px solid black;
+        }
+
+        .planet1{
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background:url(https://demo.tutorialzine.com/2013/10/css3-features-you-can-finally-use/assets/img/planet.png) no-repeat center center;
+        }
+
+        .rocket1{
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background:url(https://demo.tutorialzine.com/2013/10/css3-features-you-can-finally-use/assets/img/rocket.png) no-repeat 50px center;
+
+            /* Chrome still requires the -webkit- prefix */
+            -webkit-animation:orbit 2s linear infinite;
+            animation:orbit1 2s linear infinite;
+
+            transition:background-position 0.8s; /*The transition effect will start when the specified CSS property (width) changes value.*/
+        }
+
+        .container1:hover .rocket1{
+            background-position:80px center;
+        }
+
+        /* Define the keyframes of the animation */
+
+        @-webkit-keyframes orbit1 {
+            from {
+                -webkit-transform:rotate(0deg);}
+            to {
+                -webkit-transform:rotate(-360deg);
+            }
+        }
+
+        @keyframes orbit1 {
+            from {
+                transform:rotate(0deg);
+
+                /* I am including the -webkit-transform properties, because
+                Chrome might start supporting keyframe without prefix in the future,
+                but we can't be certain whether it will support prefix-free transform
+                at the same time */
+
+                -webkit-transform:rotate(0deg);}
+            to {
+                transform:rotate(-360deg);
+                -webkit-transform:rotate(-360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="containerbase">
+        <div class="container">
+                <div class="planet"></div>
+                <div class="rocket"></div>
+        </div>
+
+        <div class="container1">
+                <div class="planet1"></div>
+                <div class="rocket1"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pseudo Demos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet" type="text/css" media="screen" href="main.css" />-->
+    <!--<script src="main.js"></script>-->
+    <style>
+        h1 {
+            display: none;
+            background-color: aqua;
+            padding: 20px;
+        }
+        div:hover h1 {
+            display: block;
+        }
+        input:focus {
+            background-color: yellow;
+        }
+        p::first-line {
+            color: red;
+            font-variant: small-caps;            
+        }
+        h1::first-letter {
+            font-size: 200px;
+            color: red;
+        }
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content { 
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {background-color: #f1f1f1}
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <div> Hover me to show the elements.
+        <h1>Hello ! Here I Am</h1>
+    </div>
+    <div class="dropdown">
+            <button class="dropbtn">Dropdown</button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>            
+          </div>
+          <button class="dropbtn">Dropdown</button>
+
+    <form action="#">
+        <input type="text" placeholder="First Name">
+        <input type="text" placeholder="Second Name">
+        <input type="submit" value="submit">
+    </form>
+    <!--pseudo elements -->
+    <p>Here we learn JavaScript, starting from scratch and go on to advanced concepts like OOP.
+        We concentrate on the language itself here, with the minimum of environment-specific notes. Here we learn JavaScript, starting from scratch and go on to advanced concepts like OOP.
+        We concentrate on the language itself here, with the minimum of environment-specific notes.Here we learn JavaScript, starting from scratch and go on to advanced concepts like OOP.
+        We concentrate on the language itself here, with the minimum of environment-specific notes.Here we learn JavaScript, starting from scratch and go on to advanced concepts like OOP.
+        We concentrate on the language itself here, with the minimum of environment-specific notes.
+    </p>
+
+</body>
+</html>

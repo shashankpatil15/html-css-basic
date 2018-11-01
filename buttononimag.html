@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Button On Images</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .container {
+            position: relative;
+            width: 80%;
+            height: 50%;
+            max-width: 400px;
+        }
+
+        .container img {
+            width: 100%;
+            height: 50%;
+        }
+        .container .btn {
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: red;
+            font-size: 18px;
+            padding: 16px 30px;
+            border-radius: 13px;
+            cursor: pointer;            
+        }
+        .container .btn:hover {
+            background-color: royalblue;
+            color: white;
+            border-radius: 50%;
+        }
+        .button {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #f4511e;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            padding: 20px;
+            width: 200px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+         
+        }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+        .button1 {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 24px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+            }
+
+        .button1:hover {background-color: #3e8e41}
+
+        .button1:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+    </style>
+</head>
+<body>
+    <h1>Button On Images</h1>
+<div class="container">
+        <img src="images/header.jpeg" alt="header.jpeg">
+        <button class="btn">Button</button>    
+        <button class="button" style="vertical-align:middle"><span>Hover </span></button>
+        <button class="button1">Click Me</button>
+</div>
+
+</body>
+</html>

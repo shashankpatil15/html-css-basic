@@ -1,0 +1,52 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Style Image  Demos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <style>
+       *{
+           margin: 0px;           
+       }
+       header {
+           height: 50px;
+           background: repeating-linear-gradient(-45deg, #de9dd4, #de9dd4 5px, white 5px, white 10px);
+       }
+       #imgthumb{
+           width: 20%;
+           height: 50%;
+           border-radius: 55px;           
+       }
+       #img50per {
+           width: 20px;
+           height: 30px;
+           border-radius: 50%;           
+       }
+       #imgthumbline a {
+           width: 30%;
+           height: 30%;
+           border: 1px solid #ddd;
+           border-radius: 10px;           
+       }
+       #imgthumbline:hover {
+           box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+       }
+   </style>
+</head>
+<body>
+    <header>
+        <h1>Style to Images</h1>
+    </header>
+    <table border="1px;">
+        <tr>
+            <td><img id="imgthumb" src="images/layout.jpg" alt="layout.jpg"><img id="imgthumb" src="images/layout.jpg" alt="layout.jpg"><img id="imgthumb" src="images/layout.jpg" alt="layout.jpg"><img id="imgthumb" src="images/layout.jpg" alt="layout.jpg"><img id="imgthumb" src="images/layout.jpg" alt="layout.jpg"></td>
+            <!--td></td>
+            <td><a target="_blank" href="images/header.jpeg"><img id="imgthumbline" src="images/header.jpeg" alt="header.jpeg"></a></td-->
+        </tr>
+        <tr>
+            <td><img id="img50er" src="images/background-images.jpeg" alt="background-images.jpeg"></td>
+        </tr>
+    </table>
+</body>
+</html>

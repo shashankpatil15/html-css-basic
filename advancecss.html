@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Advance Css</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <style>
+        * {
+            margin: 0px;
+            background:linear-gradient(to bottom right, brown, white);
+            background-repeat:no-repeat;
+            background-size:100%
+        }
+        header {            
+            background: linear-gradient(white,red);
+            height: 50px;
+        }
+        div.roundedcorner {
+            border-radius: 25px;
+            height: 50px;
+            background: linear-gradient(white,blue);
+        }
+        .roundedcorner1 {
+            border-radius: 20px;
+            background: linear-gradient(white,green);
+            height: 40px;
+        }
+        .roundedcorner2 {
+            border-radius: 15px;
+            background: linear-gradient(white,yellow);
+            height: 30px;
+        }
+        .roundedcorner3 {
+            border-radius: 10px;
+            background: linear-gradient(white,pink);
+            height: 30px;
+        }
+        .roundedcorner4 {
+            border-radius: 5px;
+            background: linear-gradient(white,black);
+            height: 20px;
+        }
+        .borderimage {
+            border-image: url('images/header.jpg');
+            height: 50px;
+            background-origin:content-box;
+            padding: 10px dotted yellow;
+        }
+        .multibgimg {
+            background-image: url('images/logo.png'),url('images/background-images.jpeg'); 
+            background-position: right bottom, left top;
+            background-repeat: no-repeat, repeat;    
+            background-clip: border-box;
+            border: 10px dotted yellow;        
+        }
+        div.polaroid {
+            width: 250px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            text-align: center;
+            }
+
+        div.container {
+            padding: 10px;
+        }
+        .rotatedemo {
+            transform: 20deg;
+        }
+        hr {
+            overflow:visible;
+            padding: 0;
+            margin: 0;
+            border-top: medium double black;            
+        }
+        hr {
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: width 2s;  
+            transition-delay: 3s;
+            transition-duration: 10s;
+            transition-timing-function:linear;          
+        }
+        hr:hover {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+    </header>
+    <div class="roundedcorner">
+        
+    </div>
+    <div class="roundedcorner">
+        <div class="roundedcorner1">
+            <div class="roundedcorner2">
+                <div class="roundedcorner3">
+                    <div class="roundedcorner4">
+        
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+    <div >
+        <p class="borderimage">Here is the border images</p>
+    </div>
+    <div class="multibgimg">
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+        <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div class="polaroid">
+        <img src="images/background-images.jpeg" alt="Norway" style="width:100%">
+        <div class="container">
+          <p>Hardanger, Norway</p>
+        </div>
+      </div>
+    <div class="rotatedemo">
+        <h1>Here is some Roataional Peoperty</h1>
+    </div>
+    <hr size=10px;>
+    
+</body>
+</html>

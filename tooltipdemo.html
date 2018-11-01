@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tool Tip Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <style>
+       header {
+           margin: 0px;
+           height: 55px;
+           background: linear-gradient(red,green,blue,yellow);
+       }
+       div {
+           margin-top: 55px;
+       }
+       .tooltip {
+           position: relative;
+           display: inline-block;
+           border-bottom: 1px dotted black;
+       }
+       .tooltip .tooltiptext {
+           visibility: hidden;
+           width: 120px;
+           background-color: black;
+           color:yellow;
+           text-align: center;
+           border-radius: 6px;
+           padding: 5px 0;
+
+           position: absolute;
+           z-index: 1;
+       }
+       .tooltip:hover .tooltiptext {
+           visibility: visible;
+       }
+       .tooltip .tooltiptext1 {
+           visibility: hidden;
+           width: 120px;
+           background-color: black;
+           color:yellow;
+           text-align: center;
+           border-radius: 6px;
+           padding: 5px 0;
+           top: -5px; /* only add this for side*/
+           left: 105%; /* only add this for side*/
+
+           position: absolute;
+           z-index: 1;
+       }
+       .tooltip:hover .tooltiptext1 {
+           visibility: visible;
+       }
+       .tooltip .tooltiptext2 {
+           visibility: hidden;
+           width: 120px;
+           background-color: black;
+           color:yellow;
+           text-align: center;
+           border-radius: 6px;
+           padding: 5px 0;
+           bottom: 100%; /* for top we use this*/
+           left: 50%; /* for top we use this*/
+           margin-left: -60px; /* for top we use this*/ 
+
+           position: absolute;
+           z-index: 1;
+       }
+       .tooltip:hover .tooltiptext2 {
+           visibility: visible;
+       }
+        .tooltip .tooltiptext::after {
+            content: " ";
+            position: absolute;
+            top: 100%; /* At the bottom of the tooltip */
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            /*border-color: black transparent transparent transparent; /*bottom arrow*/
+            /*border-color: transparent transparent black transparent; /*top arrow*/
+            /*border-color: transparent black transparent transparent;/*left arrow*/
+            /*border-color: transparent transparent transparent black;/*right arrow*/
+        }
+
+   </style>
+</head>
+<body>
+    <header>
+        <h1>ToolTip Demos</h1>
+    </header>
+    <div class="tooltip"> Hover on me
+        <span class="tooltiptext">Tool Tip Effect</span>
+    </div> <br>
+    <div class="tooltip"> Hover on me
+            <span class="tooltiptext1">Tool Tip Effect</span>
+    </div> <br>
+    <div class="tooltip"> Hover on me
+            <span class="tooltiptext2">Tool Tip Effect</span>
+    </div>
+</body>
+</html>

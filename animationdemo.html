@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Animation Demos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            margin: 0px;
+        }
+        header {
+            background: linear-gradient(white,red);
+            height: 40px;
+            
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            background:black;
+            margin-top:40px;
+            margin-left: 20px;
+            animation-name: color-effect;
+            animation-duration: 5s;
+        }
+        @keyframes color-effect {
+            from {background: black;}
+            to {background: yellow;}
+        }
+        .secondanimation {
+            width: 100px;
+            height: 100px;
+            background: red;
+            margin-top: 40px;
+            margin-left: 20px;
+            animation-name: secondanim;
+            animation-duration: 4s;
+            animation-delay: 2s;
+            animation-iteration-count: 3;
+            animation-direction: reverse;
+            /*animation-timing-function: linear;easy;ease-out;esay-in;easy-in-out;*/
+        }
+        
+        @keyframes secondanim {
+            0% {background: red; left: 0px; top: 0px;}
+            25% {background: pink; left: 200px; top: 0px;}
+            50% {background: orange; left: 200px; top: 200px;}
+            75% {background: blue; left: 0px; top: 200px;}
+            100% {background: white; left: 0px; top: 0px;}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ANIMATION DEMOS</h1>
+    </header>
+    <div>
+        
+    </div>
+    <div class="secondanimation">
+        <h6>second animation</h6>
+    </div>
+</body>
+</html>
